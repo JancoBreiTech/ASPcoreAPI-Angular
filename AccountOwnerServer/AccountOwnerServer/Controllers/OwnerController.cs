@@ -27,11 +27,11 @@ namespace AccountOwnerServer.Controllers
         }
         //Third add here
         [HttpGet]
-        public IActionResult GetAllOwners()
+        public async Task<IActionResult> GetAllOwners()
         {
             try
             {
-                var owners = _repository.Owner.GetAllOwners();
+                var owners = await _repository.Owner.GetAllOwners();
                 _logger.LogInfo($"Return all owners from database.");
 
                 var ownerResult = _mapper.Map<IEnumerable<OwnerDTO>>(owners);
@@ -46,11 +46,11 @@ namespace AccountOwnerServer.Controllers
         }
 
         [HttpGet("{id}", Name = "OwnerById")]
-        public IActionResult GetOwnerById(Guid id)
+        public async Task<IActionResult> GetOwnerById(Guid id)
         {
             try
             {
-                var owner = _repository.Owner.GetOwnerById(id);
+                var owner = await _repository.Owner.GetOwnerById(id);
 
                 if (owner == null)
                 {
@@ -73,11 +73,11 @@ namespace AccountOwnerServer.Controllers
         }
 
         [HttpGet("{id}/account")]
-        public IActionResult GetOwnerWithDetails(Guid id)
+        public async Task<IActionResult> GetOwnerWithDetails(Guid id)
         {
             try
             {
-                var owner = _repository.Owner.GetOwnerWithDetails(id);
+                var owner = await _repository.Owner.GetOwnerWithDetails(id);
 
                 if (owner == null)
                 {
@@ -99,7 +99,7 @@ namespace AccountOwnerServer.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateOwner([FromBody]OwnerForCreationDTO owner)
+        public async Task<IActionResult> CreateOwner([FromBody]OwnerForCreationDTO owner)
         {
             try
             {
@@ -118,7 +118,7 @@ namespace AccountOwnerServer.Controllers
                 var ownerEntity = _mapper.Map<Owner>(owner);
 
                 _repository.Owner.CreateOwner(ownerEntity);
-                _repository.Save();
+                await _repository.Save();
 
                 var createdOwner = _mapper.Map<OwnerDTO>(ownerEntity);
 
@@ -132,7 +132,7 @@ namespace AccountOwnerServer.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateOwner(Guid id,[FromBody]OwnerForUpdateDTO owner)
+        public async Task<IActionResult> UpdateOwner(Guid id,[FromBody]OwnerForUpdateDTO owner)
         {
             try
             {
@@ -147,7 +147,7 @@ namespace AccountOwnerServer.Controllers
                     return BadRequest("Inavalid model object");
                 }
 
-                var ownerEntity = _repository.Owner.GetOwnerById(id);
+                var ownerEntity =await _repository.Owner.GetOwnerById(id);
                 if (ownerEntity == null)
                 {
                     _logger.LogError($"Owner with id: {id}, hasn't been found in the DB.");
@@ -157,7 +157,7 @@ namespace AccountOwnerServer.Controllers
                 _mapper.Map(owner, ownerEntity);
 
                 _repository.Owner.UpdateOwner(ownerEntity);
-                _repository.Save();
+                await _repository.Save();
 
                 return NoContent();                
             }
@@ -169,11 +169,11 @@ namespace AccountOwnerServer.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteOwner(Guid id)
+        public async Task<IActionResult> DeleteOwner(Guid id)
         {
             try
             {
-                var owner = _repository.Owner.GetOwnerById(id);
+                var owner =await _repository.Owner.GetOwnerById(id);
                 if (owner == null)
                 {
                     _logger.LogError($"Owner with id: {id}, hasn't been found in db.");
@@ -186,7 +186,7 @@ namespace AccountOwnerServer.Controllers
                 }
 
                 _repository.Owner.DeleteOwner(owner);
-                _repository.Save();
+                await _repository.Save();
 
                 return NoContent();
             }

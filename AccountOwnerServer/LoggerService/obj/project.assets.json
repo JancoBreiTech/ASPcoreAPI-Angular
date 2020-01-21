@@ -5046,11 +5046,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\AccountOwnerServer\\LoggerService\\LoggerService.csproj",
+      "projectUniqueName": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\ASPcoreAPI-Angular\\AccountOwnerServer\\LoggerService\\LoggerService.csproj",
       "projectName": "LoggerService",
-      "projectPath": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\AccountOwnerServer\\LoggerService\\LoggerService.csproj",
+      "projectPath": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\ASPcoreAPI-Angular\\AccountOwnerServer\\LoggerService\\LoggerService.csproj",
       "packagesPath": "C:\\Users\\JancoSteenkamp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\AccountOwnerServer\\LoggerService\\obj\\",
+      "outputPath": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\ASPcoreAPI-Angular\\AccountOwnerServer\\LoggerService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\JancoSteenkamp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5066,8 +5066,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\AccountOwnerServer\\Contracts\\Contracts.csproj": {
-              "projectPath": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\AccountOwnerServer\\Contracts\\Contracts.csproj"
+            "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\ASPcoreAPI-Angular\\AccountOwnerServer\\Contracts\\Contracts.csproj": {
+              "projectPath": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\ASPcoreAPI-Angular\\AccountOwnerServer\\Contracts\\Contracts.csproj"
             }
           }
         }

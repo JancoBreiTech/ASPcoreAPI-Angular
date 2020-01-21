@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Contracts
 {
@@ -9,10 +10,10 @@ namespace Contracts
     {
         //First Add here
         //Then Go to Repository
-        IEnumerable<Owner> GetAllOwners();
-        Owner GetOwnerById(Guid ownerId);
+        Task<IEnumerable<Owner>> GetAllOwners();
+        Task<Owner> GetOwnerById(Guid ownerId);
 
-        Owner GetOwnerWithDetails(Guid ownerId);
+        Task<Owner> GetOwnerWithDetails(Guid ownerId);
 
         void CreateOwner(Owner owner);
 

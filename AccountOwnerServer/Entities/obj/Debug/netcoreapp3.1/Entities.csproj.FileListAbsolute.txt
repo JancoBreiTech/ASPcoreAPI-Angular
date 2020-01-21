@@ -6,3 +6,11 @@ C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\AccountOwnerS
 C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\AccountOwnerServer\Entities\obj\Debug\netcoreapp3.1\Entities.dll
 C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\AccountOwnerServer\Entities\obj\Debug\netcoreapp3.1\Entities.pdb
 C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\AccountOwnerServer\Entities\obj\Debug\netcoreapp3.1\Entities.csprojAssemblyReference.cache
+C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\ASPcoreAPI-Angular\AccountOwnerServer\Entities\bin\Debug\netcoreapp3.1\Entities.deps.json
+C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\ASPcoreAPI-Angular\AccountOwnerServer\Entities\bin\Debug\netcoreapp3.1\Entities.dll
+C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\ASPcoreAPI-Angular\AccountOwnerServer\Entities\bin\Debug\netcoreapp3.1\Entities.pdb
+C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\ASPcoreAPI-Angular\AccountOwnerServer\Entities\obj\Debug\netcoreapp3.1\Entities.csprojAssemblyReference.cache
+C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\ASPcoreAPI-Angular\AccountOwnerServer\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfoInputs.cache
+C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\ASPcoreAPI-Angular\AccountOwnerServer\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfo.cs
+C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\ASPcoreAPI-Angular\AccountOwnerServer\Entities\obj\Debug\netcoreapp3.1\Entities.dll
+C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\ASPcoreAPI-Angular\AccountOwnerServer\Entities\obj\Debug\netcoreapp3.1\Entities.pdb

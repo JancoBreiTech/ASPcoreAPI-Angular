@@ -8410,11 +8410,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\AccountOwnerServer\\AccountOwnerServer\\AccountOwnerServer.csproj",
+      "projectUniqueName": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\ASPcoreAPI-Angular\\AccountOwnerServer\\AccountOwnerServer\\AccountOwnerServer.csproj",
       "projectName": "AccountOwnerServer",
-      "projectPath": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\AccountOwnerServer\\AccountOwnerServer\\AccountOwnerServer.csproj",
+      "projectPath": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\ASPcoreAPI-Angular\\AccountOwnerServer\\AccountOwnerServer\\AccountOwnerServer.csproj",
       "packagesPath": "C:\\Users\\JancoSteenkamp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\AccountOwnerServer\\AccountOwnerServer\\obj\\",
+      "outputPath": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\ASPcoreAPI-Angular\\AccountOwnerServer\\AccountOwnerServer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\JancoSteenkamp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8430,14 +8430,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\AccountOwnerServer\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\AccountOwnerServer\\Entities\\Entities.csproj"
+            "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\ASPcoreAPI-Angular\\AccountOwnerServer\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\ASPcoreAPI-Angular\\AccountOwnerServer\\Entities\\Entities.csproj"
             },
-            "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\AccountOwnerServer\\LoggerService\\LoggerService.csproj": {
-              "projectPath": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\AccountOwnerServer\\LoggerService\\LoggerService.csproj"
+            "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\ASPcoreAPI-Angular\\AccountOwnerServer\\LoggerService\\LoggerService.csproj": {
+              "projectPath": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\ASPcoreAPI-Angular\\AccountOwnerServer\\LoggerService\\LoggerService.csproj"
             },
-            "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\AccountOwnerServer\\Repository\\Repository.csproj": {
-              "projectPath": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\AccountOwnerServer\\Repository\\Repository.csproj"
+            "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\ASPcoreAPI-Angular\\AccountOwnerServer\\Repository\\Repository.csproj": {
+              "projectPath": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\ASPcoreAPI-Angular\\AccountOwnerServer\\Repository\\Repository.csproj"
             }
           }
         }

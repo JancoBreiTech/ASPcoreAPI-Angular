@@ -4931,11 +4931,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\AccountOwnerServer\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\ASPcoreAPI-Angular\\AccountOwnerServer\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\AccountOwnerServer\\Entities\\Entities.csproj",
+      "projectPath": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\ASPcoreAPI-Angular\\AccountOwnerServer\\Entities\\Entities.csproj",
       "packagesPath": "C:\\Users\\JancoSteenkamp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\AccountOwnerServer\\Entities\\obj\\",
+      "outputPath": "C:\\Users\\JancoSteenkamp\\Documents\\GtihubRepos\\ASPCore AccountOwner\\ASPcoreAPI-Angular\\AccountOwnerServer\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\JancoSteenkamp\\AppData\\Roaming\\NuGet\\NuGet.Config",

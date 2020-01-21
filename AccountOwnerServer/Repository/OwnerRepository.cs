@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Repository
 {
@@ -17,25 +18,25 @@ namespace Repository
 
         //Second add here
         //then go to Controller
-        public IEnumerable<Owner> GetAllOwners()
+        public async Task<IEnumerable<Owner>> GetAllOwners()
         {
-            return FindAll()
+            return await FindAll()
                 .OrderBy(ow => ow.Name)
-                .ToList();
+                .ToListAsync();
         }
 
-        public Owner GetOwnerById(Guid ownerId)
+        public async Task<Owner> GetOwnerById(Guid ownerId)
         {
-            return FindByCondition(o => o.Id.Equals(ownerId))
-                .FirstOrDefault();
+            return await FindByCondition(o => o.Id.Equals(ownerId))
+                .FirstOrDefaultAsync();
         }
 
         //Add mappings to MappingProfile
-        public Owner GetOwnerWithDetails(Guid ownerId)
+        public async Task<Owner> GetOwnerWithDetails(Guid ownerId)
         {
-            return FindByCondition(o => o.Id.Equals(ownerId))
+            return await FindByCondition(o => o.Id.Equals(ownerId))
                 .Include(acc => acc.Accounts)
-                .FirstOrDefault();
+                .FirstOrDefaultAsync();
         }
 
         public void CreateOwner(Owner owner)
