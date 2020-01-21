@@ -1,0 +1,22 @@
+2020-01-21 08:12:45.3293 ERROR Something went wrong in the GetAllOwners() action : Invalid column name 'Id'.
+Invalid column name 'DateOfBirth'.
+2020-01-21 08:15:15.6607 INFO Return all owners from database.
+2020-01-21 08:27:21.1140 INFO Return all owners from database.
+2020-01-21 08:28:18.9382 INFO Return all owners from database.
+2020-01-21 08:39:34.9028 INFO Returned Owner with id: 261e1685-cf26-494c-b17c-3546e65f5620
+2020-01-21 08:54:22.7214 INFO Return all owners from database.
+2020-01-21 08:54:35.2536 ERROR Something wnt wrong inside GetOwnerWithDetails() action: Invalid column name 'Id'.
+Invalid column name 'Id'.
+Invalid column name 'Id'.
+2020-01-21 08:56:37.9068 INFO Returned Owner with id: 261e1685-cf26-494c-b17c-3546e65f5620
+2020-01-21 08:57:03.6190 ERROR Something wnt wrong inside GetOwnerWithDetails() action: Invalid column name 'Id'.
+Invalid column name 'Id'.
+Invalid column name 'Id'.
+2020-01-21 09:02:42.8288 INFO Owner with details for id: 261e1685-cf26-494c-b17c-3546e65f5620 found
+2020-01-21 09:04:37.4775 INFO Return all owners from database.
+2020-01-21 09:04:50.1868 INFO Owner with details for id: 24fd81f8-d58a-4bcc-9f35-dc6cd5641906 found
+2020-01-21 09:08:06.3576 INFO Owner with details for id: 24fd81f8-d58a-4bcc-9f35-dc6cd5641906 found
+2020-01-21 09:09:31.2371 INFO Owner with details for id: 24fd81f8-d58a-4bcc-9f35-dc6cd5641906 found
+2020-01-21 09:31:49.9876 INFO Return all owners from database.
+2020-01-21 09:36:02.5931 INFO Return all owners from database.
+2020-01-21 09:36:22.2575 INFO Owner with details for id: 24fd81f8-d58a-4bcc-9f35-dc6cd5641906 found

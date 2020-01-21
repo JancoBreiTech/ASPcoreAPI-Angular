@@ -1,0 +1,6 @@
+2020-01-20 14:33:06.6358 INFO Here is info message from the controller.
+2020-01-20 14:33:06.7037 DEBUG Here is debug message from the controller.
+2020-01-20 14:33:06.7179 WARN Here is warn message from the controller.
+2020-01-20 14:33:06.7303 ERROR Here is error message from the controller.
+2020-01-20 16:19:14.1702 ERROR Something went wrong in the GetAllOwners() action : Unable to cast object of type 'System.String' to type 'System.Guid'.
+2020-01-20 16:25:40.3032 ERROR Something went wrong in the GetAllOwners() action : Unable to cast object of type 'System.String' to type 'System.Guid'.
