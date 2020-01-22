@@ -18,25 +18,26 @@ namespace Repository
 
         //Second add here
         //then go to Controller
-        public async Task<IEnumerable<Owner>> GetAllOwners()
+        public IEnumerable<Owner> GetAllOwners()
         {
-            return await FindAll()
+            return FindAll()
                 .OrderBy(ow => ow.Name)
-                .ToListAsync();
+                .ToList();
         }
 
-        public async Task<Owner> GetOwnerById(Guid ownerId)
+        public Owner GetOwnerById(Guid ownerId)
         {
-            return await FindByCondition(o => o.Id.Equals(ownerId))
-                .FirstOrDefaultAsync();
+            return  FindByCondition(o => o.Id.Equals(ownerId))
+                .DefaultIfEmpty(new Owner())
+                .FirstOrDefault();
         }
 
         //Add mappings to MappingProfile
-        public async Task<Owner> GetOwnerWithDetails(Guid ownerId)
+        public Owner GetOwnerWithDetails(Guid ownerId)
         {
-            return await FindByCondition(o => o.Id.Equals(ownerId))
+            return FindByCondition(o => o.Id.Equals(ownerId))
                 .Include(acc => acc.Accounts)
-                .FirstOrDefaultAsync();
+                .FirstOrDefault();
         }
 
         public void CreateOwner(Owner owner)

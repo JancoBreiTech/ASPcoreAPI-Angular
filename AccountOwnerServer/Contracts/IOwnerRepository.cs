@@ -10,10 +10,10 @@ namespace Contracts
     {
         //First Add here
         //Then Go to Repository
-        Task<IEnumerable<Owner>> GetAllOwners();
-        Task<Owner> GetOwnerById(Guid ownerId);
+        IEnumerable<Owner> GetAllOwners();
+        Owner GetOwnerById(Guid ownerId);
 
-        Task<Owner> GetOwnerWithDetails(Guid ownerId);
+        Owner GetOwnerWithDetails(Guid ownerId);
 
         void CreateOwner(Owner owner);
 

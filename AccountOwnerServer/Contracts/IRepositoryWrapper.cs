@@ -9,6 +9,6 @@ namespace Contracts
     {
         IOwnerRepository Owner { get;}
         IAccountRepository Account { get; }
-        Task Save();
+        void Save();
     }
 }
