@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 
 import { Owner } from '../../_interface/owner.model';
 import { RepositoryService } from './../../shared/repository.service'
-import { MatTableDataSource } from '@angular/material';
+import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
 
 
 @Component({
@@ -10,7 +10,7 @@ import { MatTableDataSource } from '@angular/material';
   templateUrl: './owner-list.component.html',
   styleUrls: ['./owner-list.component.css']
 })
-export class OwnerListComponent implements OnInit {
+export class OwnerListComponent implements OnInit, AfterViewInit {
 
   //order must be same as table
   displayedColumns :string[] = ['name','dateOfBirth','address','details','update','delete'];
@@ -18,10 +18,18 @@ export class OwnerListComponent implements OnInit {
   //data: Owner[] = [];
   public dataSource = new MatTableDataSource<Owner>();
 
+  @ViewChild(MatSort, {static:false}) sort: MatSort;
+  @ViewChild(MatPaginator, {static:false}) paginator: MatPaginator;
+
   constructor(private repoService: RepositoryService) { }
 
   ngOnInit() {
     this.getAllOwners();
+  }
+
+  ngAfterViewInit(): void{
+    this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
   }
 
   public getAllOwners = () => {
@@ -42,6 +50,10 @@ export class OwnerListComponent implements OnInit {
  
   public redirectToDelete = (id: string) => {
     
+  }
+
+  public doFilter = (value: string) => {
+    this.dataSource.filter = value.trim().toLocaleLowerCase();
   }
 
 }
