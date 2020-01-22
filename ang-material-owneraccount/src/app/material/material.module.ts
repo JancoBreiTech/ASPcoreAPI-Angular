@@ -13,8 +13,10 @@ import { MatTabsModule,
          MatInputModule,
          MatPaginatorModule,
          MatProgressBarModule,
-         
-         MatProgressSpinnerModule} from '@angular/material';
+         MatCardModule,
+         MatProgressSpinnerModule,
+         MatSelectModule,
+         MatExpansionModule} from '@angular/material';
   import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
@@ -36,7 +38,10 @@ import { MatTabsModule,
     MatPaginatorModule,
     MatProgressBarModule,
     MatCheckboxModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSelectModule,
+    MatCardModule,
+    MatExpansionModule
   ],
   exports:[
     MatTabsModule,
@@ -53,7 +58,10 @@ import { MatTabsModule,
     MatPaginatorModule,
     MatProgressBarModule,
     MatCheckboxModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatCardModule,
+    MatSelectModule,
+    MatExpansionModule
   ]
 })
 export class MaterialModule { }
