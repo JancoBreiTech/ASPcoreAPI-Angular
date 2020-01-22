@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from './../../environments/environment';
 import { Observable } from 'rxjs';
 import { Owner } from '../_interface/owner.model';
+import { catchError, tap, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -12,20 +13,32 @@ export class RepositoryService {
 
   constructor(private http: HttpClient) { }
 
-  public getData = (route: string) => {
-    return this.http.get(this.createCompleteRoute(route, environment.urlAddress));
+  public getData = (route: string): Observable<Owner> => {
+    return this.http.get<Owner>(this.createCompleteRoute(route, environment.urlAddress))
+    .pipe(
+      tap(res => console.log("fetched owners"))
+      );
   }
 
-  public create = (route: string, body) => {
-    return this.http.post(this.createCompleteRoute(route, environment.urlAddress), body, this.generateHeaders());
+  public create = (route: string, body): Observable<Owner> => {
+    return this.http.post<Owner>(this.createCompleteRoute(route, environment.urlAddress), body, this.generateHeaders())
+    .pipe(
+      tap(res => console.log("Created owner"))
+      );;
   }
 
-  public update = (route: string, body) => {
-    return this.http.put(this.createCompleteRoute(route, environment.urlAddress), body, this.generateHeaders());
+  public update = (route: string, body): Observable<Owner> => {
+    return this.http.put<Owner>(this.createCompleteRoute(route, environment.urlAddress), body, this.generateHeaders())
+    .pipe(
+      tap(res => console.log("updated owner"))
+      );;
   }
 
-  public delete = (route: string, body) => {
-    return this.http.delete(this.createCompleteRoute(route, environment.urlAddress));
+  public delete = (route: string, body):Observable<Owner> => {
+    return this.http.delete<Owner>(this.createCompleteRoute(route, environment.urlAddress))
+    .pipe(
+      tap(res => console.log("deleted owner"))
+      );;
   }
 
   private createCompleteRoute = (route: string, envAddress: string) => {

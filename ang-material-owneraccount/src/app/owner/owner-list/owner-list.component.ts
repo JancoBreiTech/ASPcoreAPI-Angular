@@ -13,15 +13,9 @@ import { MatTableDataSource } from '@angular/material';
 export class OwnerListComponent implements OnInit {
 
   //order must be same as table
-  public displayedColumns : [
-    'name',
-    'dateOfBirth',
-    'address',
-    'details',
-    'update',
-    'delete'
-  ];
-
+  displayedColumns :string[] = ['name','dateOfBirth','address','details','update','delete'];
+  
+  //data: Owner[] = [];
   public dataSource = new MatTableDataSource<Owner>();
 
   constructor(private repoService: RepositoryService) { }
@@ -32,9 +26,9 @@ export class OwnerListComponent implements OnInit {
 
   public getAllOwners = () => {
     this.repoService.getData('api/owner')
-    .subscribe(res => {
+    .subscribe((res : any) => {
       this.dataSource.data = res as Owner[];
-      console.log(res as Owner[]);
+      //console.log(this.dataSource.data);
     })
   }
 
