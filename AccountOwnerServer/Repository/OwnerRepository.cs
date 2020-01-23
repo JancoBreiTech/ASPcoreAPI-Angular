@@ -21,8 +21,12 @@ namespace Repository
         //then go to Controller
         public PagedList<Owner> GetAllOwners(OwnerParameters ownerParameters)
         {
+            //filtering Date of births
+            var owners = FindByCondition(o => o.DateOfBirth.Year >= ownerParameters.MinYearOfBirth &&
+                                                o.DateOfBirth.Year <= ownerParameters.MaxYearOfBirth)
+                .OrderBy(on => on.Name);
             //pagination
-            return PagedList<Owner>.ToPagedList(FindAll().OrderBy(on => on.Name),
+            return PagedList<Owner>.ToPagedList(owners,
                 ownerParameters.PageNumber, ownerParameters.PageSize);                
         }
 
