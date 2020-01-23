@@ -8,6 +8,7 @@ using Entities.DataTransferObjects;
 using Entities.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace AccountOwnerServer.Controllers
 {
@@ -27,14 +28,27 @@ namespace AccountOwnerServer.Controllers
         }
         //Third add here
         [HttpGet]
-        public IActionResult GetAllOwners()
+        public IActionResult GetAllOwners([FromQuery] OwnerParameters ownerParameters)
         {
             try
             {
-                var owners = _repository.Owner.GetAllOwners();
-                _logger.LogInfo($"Return all owners from database.");
+                var owners = _repository.Owner.GetAllOwners(ownerParameters);
+
+                var metadata = new
+                {
+                    owners.TotalCount,
+                    owners.PageSize,
+                    owners.CurrentPage,
+                    owners.TotalPages,
+                    owners.HasNext,
+                    owners.HasPrevious
+                };
 
                 var ownerResult = _mapper.Map<IEnumerable<OwnerDTO>>(owners);
+
+                Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(metadata));
+
+                _logger.LogInfo($"Returned {owners.TotalCount} owners from database.");
 
                 return Ok(ownerResult);
             }
@@ -179,7 +193,7 @@ namespace AccountOwnerServer.Controllers
                     _logger.LogError($"Owner with id: {id}, hasn't been found in db.");
                     return NotFound();
                 }
-                if (_repository.Account.AccountsByOwner(id).Any())
+                if (_repository.Account.GetAccountByOwner(id).Any())
                 {
                     _logger.LogError($"Cannot delete owner with id: {id}. It has related accounts. Delete those accounts first");
                     return BadRequest("Cannot delete owner. It has related accounts. Delete those accounts first");

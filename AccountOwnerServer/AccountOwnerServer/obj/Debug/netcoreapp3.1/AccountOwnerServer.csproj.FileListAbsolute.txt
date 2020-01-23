@@ -268,3 +268,11 @@ C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\ASPcoreAPI-An
 C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\ASPcoreAPI-Angular\AccountOwnerServer\AccountOwnerServer\obj\Debug\netcoreapp3.1\AccountOwnerServer.csproj.CopyComplete
 C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\ASPcoreAPI-Angular\AccountOwnerServer\AccountOwnerServer\obj\Debug\netcoreapp3.1\AccountOwnerServer.dll
 C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\ASPcoreAPI-Angular\AccountOwnerServer\AccountOwnerServer\obj\Debug\netcoreapp3.1\AccountOwnerServer.pdb
+C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\ASPcoreAPI-Angular\AccountOwnerServer\AccountOwnerServer\bin\Debug\netcoreapp3.1\EPPlus.dll
+C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\ASPcoreAPI-Angular\AccountOwnerServer\AccountOwnerServer\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\ASPcoreAPI-Angular\AccountOwnerServer\AccountOwnerServer\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\ASPcoreAPI-Angular\AccountOwnerServer\AccountOwnerServer\bin\Debug\netcoreapp3.1\System.Security.Cryptography.Pkcs.dll
+C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\ASPcoreAPI-Angular\AccountOwnerServer\AccountOwnerServer\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\ASPcoreAPI-Angular\AccountOwnerServer\AccountOwnerServer\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\ASPcoreAPI-Angular\AccountOwnerServer\AccountOwnerServer\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\JancoSteenkamp\Documents\GtihubRepos\ASPCore AccountOwner\ASPcoreAPI-Angular\AccountOwnerServer\AccountOwnerServer\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Cryptography.Pkcs.dll

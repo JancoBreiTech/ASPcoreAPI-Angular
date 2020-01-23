@@ -1,5 +1,6 @@
 ﻿using Contracts;
 using Entities;
+using Entities.Helpers;
 using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -18,11 +19,11 @@ namespace Repository
 
         //Second add here
         //then go to Controller
-        public IEnumerable<Owner> GetAllOwners()
+        public PagedList<Owner> GetAllOwners(OwnerParameters ownerParameters)
         {
-            return FindAll()
-                .OrderBy(ow => ow.Name)
-                .ToList();
+            //pagination
+            return PagedList<Owner>.ToPagedList(FindAll().OrderBy(on => on.Name),
+                ownerParameters.PageNumber, ownerParameters.PageSize);                
         }
 
         public Owner GetOwnerById(Guid ownerId)

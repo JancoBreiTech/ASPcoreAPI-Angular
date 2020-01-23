@@ -1,4 +1,5 @@
-﻿using Entities.Models;
+﻿using Entities.Helpers;
+using Entities.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,7 +11,7 @@ namespace Contracts
     {
         //First Add here
         //Then Go to Repository
-        IEnumerable<Owner> GetAllOwners();
+        PagedList<Owner> GetAllOwners(OwnerParameters ownerParameters);
         Owner GetOwnerById(Guid ownerId);
 
         Owner GetOwnerWithDetails(Guid ownerId);
