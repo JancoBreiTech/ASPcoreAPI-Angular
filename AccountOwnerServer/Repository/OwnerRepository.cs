@@ -23,11 +23,25 @@ namespace Repository
         {
             //filtering Date of births
             var owners = FindByCondition(o => o.DateOfBirth.Year >= ownerParameters.MinYearOfBirth &&
-                                                o.DateOfBirth.Year <= ownerParameters.MaxYearOfBirth)
-                .OrderBy(on => on.Name);
+                                                o.DateOfBirth.Year <= ownerParameters.MaxYearOfBirth);
+                        
+
+            //search for name
+            SearchByName(ref owners, ownerParameters.Name);
+
             //pagination
-            return PagedList<Owner>.ToPagedList(owners,
-                ownerParameters.PageNumber, ownerParameters.PageSize);                
+            return PagedList<Owner>.ToPagedList(owners.ToList().OrderBy(on => on.Name),
+                ownerParameters.PageNumber,
+                ownerParameters.PageSize);                
+        }
+
+        private void SearchByName(ref IQueryable<Owner> owners, string ownerName)
+        {
+            if (!owners.Any() || string.IsNullOrWhiteSpace(ownerName))
+                return;
+                
+            owners = owners.Where(o => o.Name.ToLower().Contains(ownerName.Trim().ToLower()));
+            
         }
 
         public Owner GetOwnerById(Guid ownerId)
