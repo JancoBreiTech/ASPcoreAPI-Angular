@@ -1,4 +1,5 @@
 ﻿using Contracts;
+using Contracts.Helpers;
 using Entities;
 using Entities.Helpers;
 using Entities.Models;
@@ -6,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,9 +15,13 @@ namespace Repository
 {
     public class OwnerRepository: RepositoryBase<Owner>, IOwnerRepository
     {
-        public OwnerRepository(RepositoryContext repositoryContext): base(repositoryContext)
+        private ISortHelper<Owner> _sortHelper;
+        public OwnerRepository(RepositoryContext repositoryContext, ISortHelper<Owner> sortHelper) : base(repositoryContext)
         {
+            _sortHelper = sortHelper;
         }
+
+        
 
         //Second add here
         //then go to Controller
@@ -29,8 +35,11 @@ namespace Repository
             //search for name
             SearchByName(ref owners, ownerParameters.Name);
 
+            //sort not working
+           // _sortHelper.ApplySort(owners, ownerParameters.OrderBy);
+
             //pagination
-            return PagedList<Owner>.ToPagedList(owners.ToList().OrderBy(on => on.Name),
+            return PagedList<Owner>.ToPagedList(owners,
                 ownerParameters.PageNumber,
                 ownerParameters.PageSize);                
         }
@@ -39,10 +48,15 @@ namespace Repository
         {
             if (!owners.Any() || string.IsNullOrWhiteSpace(ownerName))
                 return;
-                
-            owners = owners.Where(o => o.Name.ToLower().Contains(ownerName.Trim().ToLower()));
+
+            if (string.IsNullOrEmpty(ownerName))
+                return;
+
+            owners = owners.Where(o => o.Name.ToLowerInvariant().Contains(ownerName.Trim().ToLowerInvariant()));
             
         }
+
+       
 
         public Owner GetOwnerById(Guid ownerId)
         {

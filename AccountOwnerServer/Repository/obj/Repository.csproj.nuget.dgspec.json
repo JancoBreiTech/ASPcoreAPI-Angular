@@ -167,6 +167,10 @@
               "target": "Package",
               "version": "[4.5.3.2, )"
             },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.0.20, )"
+            },
             "System.Linq.Expressions": {
               "target": "Package",
               "version": "[4.3.0, )"
